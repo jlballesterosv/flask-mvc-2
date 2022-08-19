@@ -1,0 +1,33 @@
+{% extends "default.html" %}
+{% block title %}{{titulo}}{% endblock %}
+
+{% block content %}
+   <h1>{{titulo}}</h1>
+   <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Valor Unitario</th>
+          <th scope="col">Unidad Medida</th>
+          <th scope="col">Cantidad Stock</th>
+          <th scope="col">Categoría</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for producto in lista_productos %}
+            <tr>
+               <th scope="row">{{producto[1]}}</th>
+               <td>{{producto[2]}}</td>
+               <td>{{producto[3]}}</td>
+               <td>{{producto[4]}}</td>
+               <td>{{producto[5]}}</td>
+               <td>{{producto[6]}}</td>
+            </tr>
+         {% endfor %}
+      </tbody>
+    </table>
+    
+
+{% endblock %}
